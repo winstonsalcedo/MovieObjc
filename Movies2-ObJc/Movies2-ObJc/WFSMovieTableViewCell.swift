@@ -31,9 +31,9 @@
             
             // updating the outlets
             DispatchQueue.main.async {
-                self.movieTitleLabel.text = movie.title
+                self.movieTitleLabel.text = "Title: \(movie.title)"
                 self.movieRatingLable.text = "Rating: \(Int(truncating: movie.rating))"
-                self.movieSummaryLabel.text = movie.overview
+                self.movieSummaryLabel.text = "Overview: \(movie.overview)"
                // self.moviePosterImage.image = movie.posterImage
                 
             }

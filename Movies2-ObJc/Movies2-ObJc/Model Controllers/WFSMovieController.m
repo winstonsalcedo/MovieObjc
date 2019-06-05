@@ -33,7 +33,6 @@
     
     NSLog(@"Movie url: %@", [fullUrl absoluteString]);
     
-    // request would go here if we needed one.. but we're using defaults
     
     // MARK: - URLSession and dataTask
     // making the fetch call to the API
@@ -64,10 +63,10 @@
         // creating an array to return the movie data
         NSMutableArray *movieArray = [NSMutableArray new];
         
-        // pulling out the array of movies from the json
+        // fetching the array of movies from the json
         NSArray *fetchedMoviesArray = jsonDictionary[@"results"];
         
-        // going through the movies and adding the movie info to the array to be returned
+        // going through the movies and adding the movie info to the array
         for (NSDictionary *movies in fetchedMoviesArray) {
             WFSMovie *movie = [[WFSMovie alloc] initWithDictionary:movies];
             [movieArray addObject:movie];

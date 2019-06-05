@@ -26,10 +26,10 @@
 
 -(instancetype)initWithDictionary:(NSDictionary<NSString *,id> *)dictionary
 {
-    NSDictionary *data = dictionary [@"data"];
-    NSString *title = data[@"title"];
-    NSNumber *rating = data[@"popularity"];
-    NSString *overview = data[@"overview"];
+//    NSDictionary *data = dictionary [@"results"];
+    NSString *title = dictionary[@"title"];
+    NSNumber *rating = dictionary[@"popularity"];
+    NSString *overview = dictionary[@"overview"];
     
     return[self initWithTitle:title rating:rating overview:overview];
 }
